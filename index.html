@@ -32,6 +32,15 @@
         font-family: "Noto Sans", sans-serif;
         scroll-behavior: smooth;
       }
+      main {
+        overflow-x: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      }
+    main::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
+    }
       .ikea_font {
         font-family: "IKEA";
       }
