@@ -13,7 +13,7 @@ class SlideData {
         if (slideNum == 1) {
             this.slide1_choice = choiceVal;
         } else if (slideNum == 3) {
-            this.slide2_choice = choiceVal;
+            this.slide3_choice = choiceVal;
         } else {
             this.slide5_choice = choiceVal;
         }
@@ -174,7 +174,7 @@ function slideTo(slideNum) {
             document.querySelector('#ikea_anthem').pause();
             confetti.clear();
             slideTo(8);
-        }, 10000);
+        }, 20000);
     }
 }
 
