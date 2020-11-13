@@ -186,23 +186,24 @@ function purchase_func() {
     bar.classList.toggle('bg-red-800');
     document.querySelector('#final_house img.bungus').style.display = "none";
     document.querySelector('#final_house div.tungus').innerText = "Ikea's Secrets";
-    anime({
-        target: '#final_house',
-        backgroundColor: '#b30000',
-        duration: 300,
-    });
     document.querySelector('#final_house').style.backgroundColor = '#b30000';
     document.querySelector('.title_bunk').style.color = '#ffffff';
     document.querySelector('.kitchen_func').style.color = '#ffffff';
     document.querySelector('.kitchen_func').addEventListener('click', () => {
-        $('#final_roomting').load('loadsnippets/kitchen_func.html');
+        $('#final_roomting').load('loadsnippets/kitchen_func.html', () => {
+            slideTo(9);
+        });
     });
     document.querySelector('.living_func').style.color = '#ffffff';
     document.querySelector('.living_func').addEventListener('click', () => {
-        $('#final_roomting').load('loadsnippets/living_func.html');
+        $('#final_roomting').load('loadsnippets/living_func.html', () => {
+            slideTo(9);
+        });
     });
     document.querySelector('.bedroom_func').style.color = '#ffffff';
     document.querySelector('.bedroom_func').addEventListener('click', () => {
-        $('#final_roomting').load('loadsnippets/living_func.html');
+        $('#final_roomting').load('loadsnippets/living_func.html', () => {
+            slideTo(9);
+        });
     });
 }
