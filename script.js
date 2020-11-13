@@ -180,7 +180,8 @@ function slideTo(slideNum) {
 
 function purchase_func() {
     document.querySelector('.final_click_evil').innerText = "Purchased";
-    $(".final_click_evil").prop('onclick', null).off('click');          
+    $(".final_click_evil").prop('onclick', null).off('click');
+    document.querySelector('.bunguclickable').className = "bunguclickablegrid gap-x-2 items-center grid-rows-1 grid-cols-7 w-1/4 h-16 p-2 mr-20 mt-8";
     let bar = document.querySelector('.red_wine');
     bar.classList.toggle('bg-green-600');
     bar.classList.toggle('bg-red-800');
@@ -189,18 +190,21 @@ function purchase_func() {
     document.querySelector('#final_house').style.backgroundColor = '#b30000';
     document.querySelector('.title_bunk').style.color = '#ffffff';
     document.querySelector('.kitchen_func').style.color = '#ffffff';
+    document.querySelector('.kitchen_func').className = "text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
     document.querySelector('.kitchen_func').addEventListener('click', () => {
         $('#final_roomting').load('loadsnippets/kitchen_func.html', () => {
             slideTo(9);
         });
     });
     document.querySelector('.living_func').style.color = '#ffffff';
+    document.querySelector('.living_func').className = "text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
     document.querySelector('.living_func').addEventListener('click', () => {
         $('#final_roomting').load('loadsnippets/living_func.html', () => {
             slideTo(9);
         });
     });
     document.querySelector('.bedroom_func').style.color = '#ffffff';
+    document.querySelector('.bedroom_func').className = "text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
     document.querySelector('.bedroom_func').addEventListener('click', () => {
         $('#final_roomting').load('loadsnippets/bedroom_func.html', () => {
             slideTo(9);
