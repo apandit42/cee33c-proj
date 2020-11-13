@@ -186,7 +186,7 @@ function purchase_func() {
     bar.classList.toggle('bg-green-600');
     bar.classList.toggle('bg-red-800');
     document.querySelector('#final_house img.bungus').style.display = "none";
-    document.querySelector('#final_house div.tungus').innerText = "Ikea's Secrets";
+    document.querySelector('#final_house div.tungus').innerText = "Under the Surface";
     document.querySelector('#final_house').style.backgroundColor = '#b30000';
     document.querySelector('.title_bunk').style.color = '#ffffff';
     document.querySelector('.kitchen_func').style.color = '#ffffff';
@@ -197,14 +197,14 @@ function purchase_func() {
         });
     });
     document.querySelector('.living_func').style.color = '#ffffff';
-    document.querySelector('.living_func').className = "text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
+    document.querySelector('.living_func').className = "text-center living_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
     document.querySelector('.living_func').addEventListener('click', () => {
         $('#final_roomting').load('loadsnippets/living_func.html', () => {
             slideTo(9);
         });
     });
     document.querySelector('.bedroom_func').style.color = '#ffffff';
-    document.querySelector('.bedroom_func').className = "text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
+    document.querySelector('.bedroom_func').className = "text-center bedroom_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl";
     document.querySelector('.bedroom_func').addEventListener('click', () => {
         $('#final_roomting').load('loadsnippets/bedroom_func.html', () => {
             slideTo(9);
