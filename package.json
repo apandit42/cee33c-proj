@@ -1,0 +1,28 @@
+{
+  "name": "cee33c-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "confetti-js": "0.0.18",
+    "livereload": "^0.9.1",
+    "purgecss": "^3.0.0",
+    "rellax": "^1.12.1",
+    "sass": "^1.28.0",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apandit42/cee33c-proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apandit42/cee33c-proj/issues"
+  },
+  "homepage": "https://github.com/apandit42/cee33c-proj#readme"
+}

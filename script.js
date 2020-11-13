@@ -174,7 +174,7 @@ function slideTo(slideNum) {
             document.querySelector('#ikea_anthem').pause();
             confetti.clear();
             slideTo(8);
-        }, 32000);
+        }, 10000);
     }
 }
 
@@ -202,7 +202,7 @@ function purchase_func() {
     });
     document.querySelector('.bedroom_func').style.color = '#ffffff';
     document.querySelector('.bedroom_func').addEventListener('click', () => {
-        $('#final_roomting').load('loadsnippets/living_func.html', () => {
+        $('#final_roomting').load('loadsnippets/bedroom_func.html', () => {
             slideTo(9);
         });
     });
