@@ -1,34 +1,285 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>IKEA US - Furniture and Home Furnishings</title>
-        <meta charset="utf-8"/>
-        <link href="styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    </head>
-    <body class="bg-gray-100">
-        <style>
-            body {
-                font-family: 'Noto Sans', sans-serif;
-            }
-        </style>
-        <nav class="fixed flex items-center overflow-hidden top-0 p-10 w-full">
-            <img class="mr-12 h-8" src="ikea-logo.svg">
-            <div class="group flex rounded-full bg-gray-200 hover:bg-gray-300 items-center w-2/3 pr-6 pl-6 pt-4 pb-4 justify-between">
-                <img class="h-4 pr-4" src="search.png">
-                <input class="h-6 w-5/6 bg-gray-200 group-hover:bg-gray-300" type="search">
-                <img class="h-4 pl-4" src="camera.png">
+  <head>
+    <title>IKEA US - Furniture and Home Furnishings</title>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="bg-gray-100">
+    <style>
+      @font-face {
+        font-family: "IKEA";
+        src: url("font/NotoSansIKEA-Regular-woff2.woff2");
+      }
+      @font-face {
+        font-family: "IKEA";
+        src: url("font/NotoSansIKEA-Bold-woff2.woff2") format("woff2");
+        font-weight: bold;
+      }
+      body {
+        font-family: "Noto Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .ikea_font {
+        font-family: "IKEA";
+      }
+      .ikea_font_bold {
+        font-family: "IKEA";
+        font-weight: bold;
+      }
+      .ikea_intro {
+          filter: saturate(140%) blur(1px);
+      }
+      .ikea_color_bg {
+          background-color: #FFDC26;
+      }
+      .ik_col2 {
+          background-color: #FFED80;
+      }
+      .txt_drop {
+            text-shadow: 3px 3px #000000ce;
+      }
+    </style>
+    <main class="flex overscroll-y-none overflow-x-scroll overflow-y-hidden h-screen">
+      <section id="intro" class="flex-none w-screen h-full grid grid-rows-3 grid-cols-3 gap-2">
+        <img
+          class="ikea_intro col-span-full row-span-full z-0"
+          src="img/start-screen.jpg"
+        />
+        <div class="ikeasvg flex items-center justify-center col-span-full row-start-1 row-end-2 z-10">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 560 110"
+            color="#ffdb00"
+            class="w-2/3"
+          >
+            <title class="font-bold ikea_font">IKEA</title>
+            <path
+              fill="currentcolor"
+              d="M4.35,105.17c3.61-1.79,3.36-8,3.37-8.76,0-1.52,0-76.8,0-79.86a7.12,7.12,0,0,0-2.78-5.94h65.2s-2.8,1.61-2.8,6c0,2.58,0,76.87,0,81.46,0,1.14.49,5.46,3.37,7Z"
+            ></path>
+            <path
+              fill="currentcolor"
+              d="M161.58,105.17c-3.34-2.28-3.2-7.07-3.22-8.16,0-.78,0-14.56,0-30.59,0,0,18.21,28.7,19.91,32.88,1.87,4.59-.25,5.87-.25,5.87h75s-.76-.5-1.89-1.36a29.77,29.77,0,0,1-6.69-6.55c-2.66-3.56-30.1-48.12-30.1-48.12s20.66-28.82,23.89-33a29.06,29.06,0,0,1,5.87-5.52s-4.53,0-4.53,0H179.86s3.57,2.51.42,7.09-21.9,30.54-21.9,30.54c0-15.93,0-30.56,0-31.69a7.08,7.08,0,0,1,2.85-5.94H97.72a7.13,7.13,0,0,1,2.77,5.94c.05,3.06,0,78.34,0,79.86,0,.81.24,7-3.37,8.76Z"
+            ></path>
+            <path
+              fill="currentcolor"
+              d="M266.2,10.61A7.13,7.13,0,0,1,269,16.55c0,3.06,0,78.34,0,79.86,0,.81.24,7-3.37,8.76H375V73.05a10.27,10.27,0,0,1-7.41,3.08H324.94V68.59h30.74c1.86,0,7,.59,8.32,2.33l0-28.84c-1.38,1.93-6.57,2.38-8.28,2.38H324.92V36.91s35.67,0,40.09,0A14.8,14.8,0,0,1,375,41.15V10.61Z"
+            ></path>
+            <path
+              fill="currentcolor"
+              d="M476.22,105.17s2.88-3.23,1.87-7.14a94.13,94.13,0,0,0-4.59-11.56H445.45s-3.52,7.45-4.59,11.56c-1,3.91,1.87,7.14,1.87,7.14H386a22.4,22.4,0,0,0,5.23-7.31c2-4.59,29-76.67,30.07-79.27,2-5-1.31-7.93-1.31-7.93h90.23a7.71,7.71,0,0,0-1.49,8.06c1.69,5.1,30.51,76.54,31.81,79.14a19.37,19.37,0,0,0,6,7.31ZM467,69.31S460.25,52.63,460,52a16.53,16.53,0,0,1-1-4.86h-.1A16.53,16.53,0,0,1,458,52c-.26.63-7,17.31-7,17.31Z"
+            ></path>
+            <path
+              fill="currentcolor"
+              d="M522.87,19.68a16,16,0,1,1,16,15.8,15.74,15.74,0,0,1-16-15.8m16,13.18c7.13,0,12.76-5.59,12.76-13.18a12.8,12.8,0,1,0-25.6,0c0,7.59,5.63,13.18,12.84,13.18m-3.33-4.05H532.8V10.64h6.92c4.29,0,6.42,1.58,6.42,5.17,0,3.25-2,4.67-4.71,5l5.16,8h-3.08l-4.79-7.88h-3.17Zm3.29-10.21c2.34,0,4.42-.17,4.42-3,0-2.25-2-2.67-4-2.67h-3.75V18.6Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="mt-12 flex justify-center row-start-2 row-end-3 col-start-2 col-end-3 z-10">
+            <span class="typed_intro text-4xl font-bold text-white txt_drop">
+                
+            </span>
+        </div>
+        <div class="flex justify-center row-start-3 row-end-4 col-start-2 col-end-3 z-10">
+            <div onclick="slideTo(1)" class="group transition-all duration-300 hover:w-11/12 hover:h-24 w-5/6 h-20 shadow-md flex justify-evenly ikea_color_bg flex-row items-center rounded-full">
+                <div class="text-2xl font-bold text-gray-800 px-4">Create My Better Life</div>
+                <div class="transition-all duration-300 group-hover:w-16 w-10"><img src="img/arrow.svg"></div>
             </div>
-        </nav>
-        <main>
-             
-        </main>
-        <footer>
-
-        </footer>
-        <script>
-            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-            ':9000/livereload.js?snipver=1"></' + 'script>')
-        </script>
-    </body>
+        </div>
+      </section>
+      <section id="q1" class="grid grid-cols-12 grid-rows-6 gap-6 flex-none w-screen h-full">
+        <div class="row-start-1 row-end-2 col-span-full">
+            <img class="p-6 w-1/6" src="img/ikea_name.svg">
+        </div>
+        <div class="row-start-2 row-end-6 col-start-1 col-end-4 flex justify-center items-center">
+            <div class="typed_slide1 text-6xl p-8 font-bold text-gray-800">
+                
+            </div>
+        </div>
+        <video src="videos/bed.mp4" class="row-start-2 row-end-4 col-start-4 col-end-7 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="modern_data(1)" class="row-start-2 row-end-4 col-start-7 col-end-10 flex bg-indigo-200 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl black text-5xl" style="font-family: 'Roboto';">
+                Modern
+            </span>        
+        </div>
+        <video src="videos/lamp.mp4" class="row-start-2 row-end-4 col-start-10 col-end-13 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="minimal_data(1)" class="row-start-4 row-end-6 col-start-4 col-end-7 flex bg-red-200 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-gray-800 text-5xl" style="font-family: 'Quicksand';">
+                minimal
+            </span>
+        </div>
+        <img src="img/pillows.webp" class="row-start-4 row-end-6 col-start-7 col-end-10 object-cover w-full h-full">
+        <div onclick="stylish_data(1)" class="row-start-4 row-end-6 col-start-10 col-end-13 flex bg-green-200 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-blue-800 text-5xl" style="font-family: 'Abril Fatface';">
+                Stylish
+            </span>
+        </div>
+        <div class="row-start-6 row-end-7 col-span-full flex justify-end">
+            <div class="transition-all duration-300 group grid gap-x-2 items-center grid-rows-1 grid-cols-7 hover:w-1/3 w-1/4 hover:h-20 h-16 p-2 mr-20 mt-8">
+                <div class="text-center h-full flex justify-center items-center col-start-1 col-end-4 text-xl font-bold text-gray-800 ikea_color_bg rounded-full row-span-full z-20">
+                    Progress
+                </div>
+                <img class="hover:animate-bounce transition-all duration-300 group-hover:w-2/3 row-span-full col-start-4 col-end-5 w-1/2 z-20" src="img/meatball.png">
+                <div class="col-start-1 col-end-8 row-span-full ik_col2 h-full rounded-full z-0"></div>
+            </div>
+        </div>
+      </section>
+      <section id="q1_furn" class="grid grid-cols-3 grid-rows-6 gap-6 flex-none w-screen h-full">
+      </section>
+      <section id="q2" class="grid grid-cols-12 grid-rows-6 gap-6 flex-none w-screen h-full">
+        <div class="row-start-1 row-end-2 col-span-full">
+            <img class="p-6 w-1/6" src="img/ikea_name.svg">
+        </div>
+        <div class="row-start-2 row-end-6 col-start-1 col-end-4 flex justify-center items-center">
+            <div class="typed_slide3 text-6xl p-8 font-bold text-gray-800">
+                
+            </div>
+        </div>
+        <video src="videos/framebed.mp4" class="row-start-4 row-end-6 col-start-4 col-end-7 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="alone_data(3)" class="row-start-4 row-end-6 col-start-7 col-end-10 flex bg-teal-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl black text-5xl">
+                Alone...
+            </span>        
+        </div>
+        <video src="videos/kitchen_remodel.mp4" class="row-start-4 row-end-6 col-start-10 col-end-13 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="roommate_data(3)" class="row-start-2 row-end-4 col-start-4 col-end-7 flex bg-pink-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-gray-800 text-5xl">
+                Roommates or Partner
+            </span>
+        </div>
+        <img src="img/surfboards.webp" class="row-start-2 row-end-4 col-start-7 col-end-10 object-cover w-full h-full">
+        <div onclick="family_data(3)" class="row-start-2 row-end-4 col-start-10 col-end-13 flex bg-orange-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-blue-800 text-5xl">
+                With Family
+            </span>
+        </div>
+        <div class="row-start-6 row-end-7 col-span-full flex justify-end">
+            <div class="transition-all duration-300 group grid gap-x-2 items-center grid-rows-1 grid-cols-7 hover:w-1/3 w-1/4 hover:h-20 h-16 p-2 mr-20 mt-8">
+                <div class="h-full flex justify-center items-center col-start-1 col-end-4 text-xl font-bold text-gray-800 ikea_color_bg rounded-full row-span-full z-20">
+                    Progress
+                </div>
+                <img class="hover:animate-bounce transition-all duration-300 group-hover:w-2/3 row-span-full col-start-6 col-end-7 w-1/2 z-20" src="img/meatball.png">
+                <div class="col-start-1 col-end-5 row-span-full bg-green-600 h-full rounded-full z-10"></div>
+                <div class="col-start-1 col-end-8 row-span-full ik_col2 h-full rounded-full z-0"></div>
+            </div>
+        </div>
+      </section>
+      <section id="q2_furn" class="grid grid-cols-3 grid-rows-6 gap-6 flex-none w-screen h-full">
+      </section>
+      <section id="q3" class="grid grid-cols-12 grid-rows-6 gap-6 flex-none w-screen h-full">
+        <div class="row-start-1 row-end-2 col-span-full">
+            <img class="p-6 w-1/6" src="img/ikea_name.svg">
+        </div>
+        <div class="row-start-2 row-end-6 col-start-1 col-end-4 flex justify-center items-center">
+            <div class="typed_slide5 text-5xl p-8 font-bold text-gray-800">
+                
+            </div>
+        </div>
+        <video src="videos/wallvid.mp4" class="row-start-4 row-end-6 col-start-4 col-end-7 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="recycle_data(5)" class="row-start-4 row-end-6 col-start-7 col-end-10 flex bg-teal-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl black text-5xl">
+                Recycling
+            </span>        
+        </div>
+        <video src="videos/dining.mp4" class="row-start-4 row-end-6 col-start-10 col-end-13 object-cover w-full h-full" loop autoplay muted>
+        </video>
+        <div onclick="ethics_data(5)" class="row-start-2 row-end-4 col-start-4 col-end-7 flex bg-pink-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-gray-800 text-5xl">
+                Ethical Sources
+            </span>
+        </div>
+        <img src="img/living.webp" class="row-start-2 row-end-4 col-start-7 col-end-10 object-cover w-full h-full">
+        <div onclick="neutral_data(5)" class="row-start-2 row-end-4 col-start-10 col-end-13 flex bg-orange-400 justify-center items-center">
+            <span class="text-center transition-all duration-300 hover:text-6xl text-blue-800 text-5xl">
+                Carbon Neutrality
+            </span>
+        </div>
+        <div class="row-start-6 row-end-7 col-span-full flex justify-end">
+            <div class="transition-all duration-300 group grid gap-x-2 items-center grid-rows-1 grid-cols-7 hover:w-1/3 w-1/4 hover:h-20 h-16 p-2 mr-20 mt-8">
+                <div class="h-full flex justify-center items-center col-start-1 col-end-4 text-xl font-bold text-gray-800 ikea_color_bg rounded-full row-span-full z-20">
+                    Progress
+                </div>
+                <img class="hover:animate-bounce transition-all duration-300 group-hover:w-2/3 row-span-full col-start-7 col-end-8 w-1/2 z-20" src="img/meatball.png">
+                <div class="col-start-1 col-end-7 row-span-full bg-green-600 h-full rounded-full z-10"></div>
+                <div class="col-start-1 col-end-8 row-span-full ik_col2 h-full rounded-full z-0"></div>
+            </div>
+        </div>
+      </section>
+      <section id="q3_furn" class="grid grid-cols-3 grid-rows-6 gap-6 flex-none w-screen h-full">
+      </section>
+      <section id="meatball_break" class="bg-blue-800 grid grid-cols-4 grid-rows-6 gap-6 flex-none w-screen h-full">
+        <img class="p-12 col-start-2 col-end-4 row-start-1 row-end-3 w-full h-full object-contain z-0" src="img/ikea-logo.jpg">
+        <img class="animate-spin p-12 col-start-2 col-end-4 row-start-3 row-end-6 w-full h-full object-contain z-0" src="img/ikea_dish.png">
+        <img class="p-12 col-start-1 col-end-2 row-start-5 row-end-7 w-full h-full object-contain z-0" src="img/ikea_dish.png">
+        <img class="p-12 col-start-4 col-end-5 row-start-5 row-end-7 w-full h-full object-contain z-0" src="img/ikea_dish.png">
+        <div class="flex items-center justify-center col-start-2 col-end-4 row-start-6 row-end-7 text-white text-2xl">
+            <span class="text-center mt-8">Generating optimal home...</span>
+        </div>
+        <audio class="hidden" id="ikea_anthem" contenteditable="false" src="videos/ikea_anthem.mp3"></audio>
+        <canvas class="col-span-full row-span-full z-10" id="meatball_canvas"></canvas>
+      </section>
+      <section id="final_house" class="grid bg-indigo-200 grid-cols-3 grid-rows-6 gap-6 flex-none w-screen h-full">
+        <div class="tungus flex justify-between row-start-1 row-end-2 col-span-full">
+            <img class="bungus justify-start p-6 w-1/6" src="img/ikea_name.svg">
+        </div>
+        <img class="row-start-2 row-end-6 col-start-1 col-end-3 w-full h-full object-contain" src="other_img/flathouse.png">
+        <div class="flex justify-center items-center flex-col row-start-2 row-end-6 col-start-3 col-end-4">
+            <div class="text-center title_bunk text-6xl font-bold text-black">
+                Your Chosen House
+            </div>
+            <div class="text-center kitchen_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl">
+                Kitchen
+            </div>
+            <div class="text-center living_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl">
+                Living Room
+            </div>
+            <div class="text-center bedroom_func text-5xl transition-all duration-300 text-gray-900 hover:text-6xl">
+                Bedroom
+            </div>
+        </div>
+        <div class="row-start-6 row-end-7 col-span-full flex justify-end">
+            <div class="transition-all duration-300 group grid gap-x-2 items-center grid-rows-1 grid-cols-7 hover:w-2/3 w-1/3 hover:h-24 h-20 p-2 mr-20 mt-8">
+                <div onclick="purchase_func()" class="final_click_evil h-full flex justify-center items-center col-start-1 col-end-4 text-3xl font-bold text-gray-800 ikea_color_bg rounded-full row-span-full z-20">
+                    Buy Now
+                </div>
+                <div class="red_wine col-start-1 col-end-8 row-span-full bg-green-600 h-full rounded-full z-10"></div>
+                <div class="col-start-1 col-end-8 row-span-full ik_col2 h-full rounded-full z-0"></div>
+            </div>
+        </div>
+      </section>
+    <section id="final_roomting" class="bg-gray-800 grid grid-cols-3 grid-rows-6 gap-6 flex-none w-screen h-full">
+    </section>
+    </main>
+    <script>
+      document.write(
+        '<script src="http://' +
+          (location.host || "localhost").split(":")[0] +
+          ':35729/livereload.js?snipver=1"></' +
+          "script>"
+      );
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" module></script>
+    <script src="anime.min.js" module></script>
+    <script src="script.js" module defer></script>
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+  </body>
 </html>
